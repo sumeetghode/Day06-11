@@ -1,0 +1,46 @@
+
+
+<div>
+  <h1> Welcome {{name}} to this app</h1>
+  <h3> 1.uppercase : {{name|uppercase}}</h3>
+  <h3> 2.titlecase :{{name|titlecase}}</h3>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h3>3.Todays Date:{{date|date}} </h3>
+    <h4>Long Date:{{date|date:'long'}} </h4>
+    <h4>Short Date:{{date|date:'short'}} </h4>
+    <h4>Time:{{date|date:'shortTime'}}</h4>
+  </div>
+</div>
+<div>
+
+</div>
+<div>
+
+</div>
+<div class="card">
+  <h3 class="card-header">4:Slice</h3>
+  <div class="card-body">
+    <h5>Data without Slice :{{data}}</h5>
+    <h5>Data with Slice :{{data|slice:2}}</h5>
+  </div>
+</div>
+<div>
+  <h1> 6: Routing </h1>
+  <nav>
+    <a routerLink="/departments" routerLinkActive="active">departments</a>
+    <a routerLink="/employees" routerLinkActive="active">Employees</a>
+  </nav>
+</div>
+<router-outlet></router-outlet>
+<br>
+
+<h4>
+  Custom Pipe
+</h4>
+<ul *ngFor= "let name of names">
+  <li>
+    {{name | uxpipe}}
+  </li>
+</ul>
